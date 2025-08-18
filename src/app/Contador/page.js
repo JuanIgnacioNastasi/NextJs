@@ -6,7 +6,7 @@ export default function ContadorPage(){
     const [checked, setChecked] = useState(false);
 
     useEffect(() => {
-        if (cuenta == 20){
+        if (cuenta === 20 || cuenta === -20){
             setCuenta(0)
         }
     }, [cuenta])
