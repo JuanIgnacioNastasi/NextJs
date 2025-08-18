@@ -1,5 +1,10 @@
 "use client"
 
+import Button from "@/components/Button";
+import Input from "@/components/Input";
+import Title from "@/components/Title";
+import { useEffect, useState } from "react";
+
 export default function ContadorPage(){
 
     const [cuenta,setCuenta] = useState(0);
@@ -13,11 +18,11 @@ export default function ContadorPage(){
 
     
     function incrementar(){
-        setCuenta = (cuenta + 1) 
+        setCuenta (cuenta + 1) 
     }
 
     function decrementar(){
-        setCuenta = (cuenta - 1) 
+        setCuenta (cuenta - 1) 
     }
 
     function funcionalidad(event){
@@ -37,6 +42,7 @@ export default function ContadorPage(){
     return(
         <>
         <Title title= "Página del contador"></Title>
+        <h2>Contador: {cuenta}</h2>
         <h3>Presione lo que desee</h3>
         <Input type={"checkBox"} onChange={funcionalidad}></Input>
         <Button text={"subir/bajar"} onClick={subeobaja}></Button>
