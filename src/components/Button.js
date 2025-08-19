@@ -10,15 +10,13 @@ export default function Button(props){
             <button className={
                 clsx(
                     {
-                
+                      [styles.button] : true,
+                      [styles.incremental] : props.color == "verde",
+                      [styles.decremental] : props.color == "rojo", 
 
                     }
                 )
-            }
-            
-            
-            onClick ={props.onClick}>{props.text}</button>
+                }onClick ={props.onClick}>{props.text}</button>
         </>
-    )
-
+    );
 }
